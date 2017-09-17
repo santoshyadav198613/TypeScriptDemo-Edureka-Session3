@@ -1,8 +1,11 @@
+import { Product } from './product'
+
 class Employee implements IEmployeeOps {
     private id: number;
     readonly name: string;
     protected age: number;
     address: IEmployee;
+    product = new Product();
     // address1: string;
     // address2: 
     dob: Date;
@@ -35,13 +38,17 @@ class Employee implements IEmployeeOps {
 }
 
 
+let prod = new Product();
+
+
+
 let emp = new Employee(1, 'test');
 console.log(emp.name);
 console.log(emp.getId());
 console.log(emp.getId());
 
 emp.address.address1 = 'test';
-emp.address.pin =23;
+emp.address.pin = 23;
 
 
 interface IEmployee {
